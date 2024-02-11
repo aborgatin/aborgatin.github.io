@@ -70,7 +70,7 @@
         </p>
         <div class="social-links">
             <!--        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
-            <a href="https://vk.com/borgatin" class="vkontakte"><i class="bx bxl-vk"></i></a>
+<!--            <a href="https://vk.com/borgatin" class="vkontakte"><i class="bx bxl-vk"></i></a>-->
             <!--        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
             <a href="https://t.me/borgatin" class="telegram"><i class="bx bxl-telegram"></i></a>
             <a href="https://www.linkedin.com/in/alexandr-borgatin-346097132/" class="linkedin"><i
@@ -105,34 +105,26 @@
                                 <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong>
                                     <span>14 August 1990</span></li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
-                                    <span>+7 937 628 83 29</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Saint-Petersburg, Russia</span>
+                                    <span>+34 692940845</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Barcelona, Spain</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>31</span></li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span>
                                 </li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>a.borgatin@yandex.ru</span>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>a.borgatin@gmail.com</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <p>
-                        I have 8 years experience in software engineering, 6 years in Java development and 4 years in
-                        Big Data engineering. <br/>
-                        I've worked for <a href="https://www.sberbank.ru" target="_blank">Sber</a>, <a
-                            href="https://www.griddynamics.com" target="_blank">Grid Dynamics</a>, <a
-                            href="https://www.kohls.com/" target="_blank">Kohl's</a> and <a href="https://levi.com"
-                                                                                            target="_blank">Levi's</a>.
+                    <p id="experienceParagraph">
+                        I have <span id="totalExperience"></span> years experience in software engineering, <span id="javaExperience"></span> years in Java development, and <span id="bigDataExperience"></span> years in Big Data engineering.
                         <br/>
-                        For the last 2 years I've been working at <a href="https://www.vk.com"
-                                                                     target="_blank">vk.com</a>, the largest social
-                        network in Russia.
-
-
+                        I've worked for <a href="https://www.sberbank.ru" target="_blank">Sber</a>, <a href="https://www.griddynamics.com" target="_blank">Grid Dynamics</a>, <a href="https://www.kohls.com/" target="_blank">Kohl's</a>, <a href="https://levi.com" target="_blank">Levi's</a> and <a href="https://www.vk.com" target="_blank">vk.com</a>.
+                        <br/>
+                        For the last <span id="currentJobExperience"></span> years, I've been working at <a href="https://tripledotstudios.com/" target="_blank">Tripledot Studios</a>, the mobile games development company.
                     </p>
                 </div>
             </div>
@@ -785,7 +777,7 @@
 <!--            placeat.</p>-->
         <div class="social-links">
             <!--        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
-            <a href="https://vk.com/borgatin" class="vkontakte"><i class="bx bxl-vk"></i></a>
+<!--            <a href="https://vk.com/borgatin" class="vkontakte"><i class="bx bxl-vk"></i></a>-->
             <!--        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
             <a href="https://t.me/borgatin" class="telegram"><i class="bx bxl-telegram"></i></a>
             <a href="https://www.linkedin.com/in/alexandr-borgatin-346097132/" class="linkedin"><i
@@ -822,27 +814,19 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (m, e, t, r, i, k, a) {
-        m[i] = m[i] || function () {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        m[i].l = 1 * new Date();
-        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   <script>
+        // Function to calculate the number of years
+        function calculateExperience(startYear) {
+            var currentYear = new Date().getFullYear();
+            return currentYear - startYear;
+        }
 
-    ym(85951751, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true
-    });
-</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/85951751" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+        // Update the content with calculated years
+        document.getElementById('totalExperience').textContent = calculateExperience(2014);
+        document.getElementById('javaExperience').textContent = calculateExperience(2016);
+        document.getElementById('bigDataExperience').textContent = calculateExperience(2018);
+        document.getElementById('currentJobExperience').textContent = calculateExperience(2022);
+    </script>
 
 </body>
 
